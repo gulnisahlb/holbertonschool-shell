@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 #hello world
-kill -9 "$(pgrep 7-highlander)"
+pid=$(pgrep 7-highlander)
 
+if [ -n "$pid" ]; then
+    kill -9 "$pid"
+fi
