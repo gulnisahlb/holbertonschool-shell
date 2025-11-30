@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#hello world
+trap 'echo "I am invincible!!!"' SIGTERM
+# Sonsuz döngü
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
