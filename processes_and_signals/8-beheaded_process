@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-pkill -f 7-highlander
-
+# Kills the 7-highlander process.
+PID=$(pgrep -f "7-highlander" | head -n 1)
+if [ -n "$PID" ]; then
+    kill -9 "$PID"
+fi
